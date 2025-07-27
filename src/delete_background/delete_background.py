@@ -7,7 +7,7 @@ gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
 _, thresh = cv2.threshold(gray, 240, 255, cv2.THRESH_BINARY_INV)
 contours, _ = cv2.findContours(thresh, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
 
-output_folder = 'cartas_output'
+output_folder = 'images_without_background'
 os.makedirs(output_folder, exist_ok=True)
 
 desired_size = (160, 230)
@@ -25,4 +25,4 @@ for cnt in contours:
         cv2.imwrite(f'{output_folder}/card_{count}.png', card_trans)
         count += 1
 
-print(f'Se guardaron {count} cartas')
+print(f'{count} images saved')
