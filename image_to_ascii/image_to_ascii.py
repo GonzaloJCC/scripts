@@ -1,8 +1,8 @@
 from PIL import Image
 
-IMAGE_NAME = "fantasia"
+IMAGE_NAME = "image_name"
 IMAGE_EXTENSION = ".jpg"
-NEW_SIZE_RATIO = 10
+NEW_SIZE_RATIO = 15
 
 def main() -> None:
 
@@ -31,17 +31,17 @@ def main() -> None:
 
     ascii_characters = {
     '@': 0,
-    '#': 70,
-    '8': 140,
-    '&': 210,
-    '%': 280,
-    '$': 350,
-    '*': 420,
-    '+': 490,
-    '=': 560,
-    '-': 600,
-    ':': 650,
-    '.': 720
+    '#': 51,
+    '8': 102,
+    '&': 153,
+    '%': 204,
+    '$': 255,
+    '*': 306,
+    '+': 357,
+    '=': 408,
+    '-': 459,
+    ':': 510,
+    '.': 561
 }
 
     img = img.convert("RGB") # Converts each pixel to an RGB tuple (0 - 255, 0 - 255, 0 - 255)
@@ -51,8 +51,7 @@ def main() -> None:
         for x in range(width):
             r, g, b = pix[x, y]
             brightness = 0.299*r + 0.587*g + 0.114*b
-            scaled_brightness = brightness * (700 / 255)
-
+            scaled_brightness = brightness * (612 / 255)  # Scale to match max ascii value
 
             if scaled_brightness <= ascii_characters['@']:
                 grid[y][x] = '@'
