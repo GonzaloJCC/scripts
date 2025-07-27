@@ -9,8 +9,9 @@ def main() -> None:
     img_name = IMAGE_NAME
     img_extension = IMAGE_EXTENSION
 
-    img = Image.open(f"{img_name}{img_extension}")
-    if not img:
+    try:
+        img = Image.open(f"{img_name}{img_extension}")
+    except:
         print("Image not found")
         return
     
