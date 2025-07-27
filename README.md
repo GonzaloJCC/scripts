@@ -6,6 +6,7 @@ A collection of python scripts for diferent purposes. Each script comes with its
 ## Requirements
 - `Python3`
 - `Make`
+
 ---
 
 ## How to use
@@ -39,3 +40,5 @@ A collection of python scripts for diferent purposes. Each script comes with its
    ```bash
    make clean
    ```
+
+---
