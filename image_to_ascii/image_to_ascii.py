@@ -1,8 +1,8 @@
 from PIL import Image
 
-IMAGE_NAME = "image_name"
+IMAGE_NAME = "img_name"
 IMAGE_EXTENSION = ".jpg"
-NEW_SIZE_RATIO = 15
+NEW_SIZE_RATIO = 25
 
 def main() -> None:
 
@@ -18,9 +18,9 @@ def main() -> None:
 
     # ASCII characters are much bigger than a pixel, so it's necesary to resize the image
     
-    new_width = width // NEW_SIZE_RATIO
+    new_width = width * 2 // NEW_SIZE_RATIO
     aspect_ratio = height / width
-    new_height = int(new_width * aspect_ratio * 0.5)
+    new_height = int(new_width * aspect_ratio * 0.43)  # 0.3 factor to correct for ASCII char height/width ratio
     img = img.resize((new_width, new_height))
     width, height = img.size
 
