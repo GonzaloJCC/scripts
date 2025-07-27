@@ -6,5 +6,7 @@ __pycache__
 venv/
 
 *.png
+*.png:Zone.Identifier
 *.jpg
+*.jpg:Zone.Identifier
 *.txt
