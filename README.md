@@ -21,7 +21,7 @@ A collection of python scripts for diferent purposes. Each script comes with its
    cd scripts
    ```
 
-3. Navigate a script folder:
+3. Navigate to a script folder:
    ```bash
    cd <folder_name>
    ```
